@@ -1,0 +1,32 @@
+Time and Space Complexities of Sorting Algorithms
+Sorting algorithms play a crucial role in computer science by organizing data efficiently. Each algorithm has different time and space complexities, which determine its performance in various scenarios. Below, we analyze the complexities of Selection Sort, Insertion Sort, and Merge Sort based on their best, average, and worst cases.
+1. Selection Sort
+Working Principle
+Selection Sort repeatedly finds the smallest element from the unsorted part of the array and swaps it with the first unsorted element.
+Time Complexity:
+•	Best Case: O(n^2)-Even if the array is already sorted, Selection Sort still scans the entire array to find the minimum element.
+•	Average Case: O(n^2)– On average, the algorithm performs n^2 comparisons and n swaps.
+•	Worst Case: O(n^2)– When the array is sorted in reverse order, the number of comparisons remains the same.
+Space Complexity:
+•	O(1)– Selection Sort is an in-place sorting algorithm and does not require additional space apart from a few temporary variables for swapping elements.
+2. Insertion Sort
+Working Principle
+Insertion Sort builds the sorted array one element at a time by inserting each new element into its correct position within the sorted section.
+Time Complexity:
+•	Best Case: O(n) – If the array is already sorted, the algorithm only makes n−1 comparisons and no swaps.
+•	Average Case: O(n^2) – In a random order array, each element may need to shift backward multiple times.
+•	Worst Case: O(n^2)– When the array is sorted in descending order, every element has to be shifted n−1 times.
+Space Complexity:
+•	O(1)– Like Selection Sort, Insertion Sort sorts the array in place without requiring extra memory.
+3. Merge Sort
+Working Principle
+Merge Sort follows a divide-and-conquer approach: it splits the array into two halves, recursively sorts each half, and then merges the sorted halves.
+Time Complexity:
+•	Best Case: O(n log n) – Even for a sorted array, Merge Sort still divides and merges subarrays.
+•	Average Case: O(n log n) – The algorithm consistently divides the array into smaller parts and merges them in a logarithmic number of steps.
+•	Worst Case: O(n log n) – The worst case follows the same division and merging process, ensuring a predictable performance.
+Space Complexity:
+•	O(n) – Unlike Selection and Insertion Sort, Merge Sort requires additional space for temporary arrays during the merging process.
+----------------------------------------------------------------------------------------------------------------
+•  Selection Sort and Insertion Sort are simple, in-place algorithms with quadratic time complexities (O(n^2)), making them inefficient for large datasets. However, they perform better on small or nearly sorted arrays.
+•  Merge Sort, with its divide-and-conquer strategy, consistently performs at O(n log n), making it more efficient for larger datasets. However, it has higher space complexity (O(n)) due to the need for additional storage during merging.
